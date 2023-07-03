@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+min-height: 100vh; 
+margin: auto;
+padding: 0;
+position:relative;
+background: linear-gradient(180deg, #EFECF2 0%, #DDD2E6 46.88%, rgba(204, 188, 216, 0.66) 100%);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#header-container {
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width:100%;
+margin-top: 10px;
+margin-left:auto;
+height: 100px;
+}
+
+
+h1 {
+color: rgba(0, 0, 0, 0.56);
+text-align: center;
+font-size: 36px;
+font-family: Montserrat;
+font-weight: 700;
+margin-top:0;
+padding: 40px 30px 0 0;
+}
+
+h2{
+color: rgba(0, 0, 0, 0.60);
+text-align: center;
+font-size: 20px;
+font-family: Roboto;
+margin-top: 0;
+display:flex;
+align-items: center;
+}
+
+
+#cards-container {
+position:relative;
+display:flex;
+justify-content:center;
+align-items: center;
+margin:20px;
+padding: 0;
+width:auto;
+height: auto;
+background: linear-gradient(180deg, rgba(143, 139, 192, 0.19) 0%, rgba(143, 139, 192, 0.00) 100%);
+}
+
+
+.cards {
+display:inline-block;
+margin-top: 10px;
+margin-bottom: 0;
+margin-left:10px;
+align-items: center;
+}
+
+#card-2 {
+width: 280px;
+height: 440px;
+border-radius: 15px;
+background: linear-gradient(113deg, rgba(191, 122, 245, 0.34) 18.42%, #BF7AF5 74.91%);
+box-shadow: 1px 8px 14px 0px rgba(0, 0, 0, 0.25);
+}
+  
+#card-1, 
+#card-3 { 
+width: 270px;
+height: 415px;
+border-radius: 15px;
+border: 1px solid rgba(0, 0, 0, 0.00);
+background: #F9F9F9;
+box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+h3 {
+color: #000;
+text-align: center;
+font-size: 20px;
+font-family: Roboto;
+}
+
+
+.toggle-btn {
+display:flex;
+align-items: flex-start;
+margin:1rem;
+width: 50px;
+height: 25px;
+background-color: gray;
+display: inline-block;
+cursor: pointer;
+position: relative;
+border-radius: 25px;
+transition: background-color 0.3s;
+}
+
+.toggle-btn:before /*Toggle circle*/
+{
+content: "";
+position: absolute;
+width: 16px;
+height: 16px;
+background-color: white;
+border-radius: 50%;
+top: 50%;
+left: 4px;
+transform: translateY(-50%); /*Make exactly in the centre*/
+transition: left 0.3s;
+}
+
+input[type="checkbox"]:checked + .toggle-btn:before {
+left: 55%;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .toggle-btn {
+  background-color: #BF7AF5;;
+}
+
+.toggle-btn,
+.toggle-btn:before {
+box-sizing: border-box;
+}
+
+
+.text {
+display:flex;
+justify-content: center;
+width: 152px;
+height: 25px;
+flex-direction: column;
+padding:50px;
+margin-top:60px;
+color: rgba(0, 0, 0, 0.67);
+text-align: center;
+font-size: 15px;
+font-family: Roboto;
+font-weight: 600;
+line-height: 40px;
+}
+
+
+.pricing {
+display:flex;
+justify-content: center;
+padding-left:50px;
+width: 184px;
+height: 41px;
+color: #000;
+text-align: center;
+font-size: 58px;
+font-family: Roboto;
+}
+
+.learn-button, .professional-button {
+display: flex;
+align-items: center; 
+justify-content: center;
+margin:1rem;
+padding:1rem;
+width: 245px;
+height: 48px;
+flex-shrink: 0;
+border-radius: 15px;
+border:none;
+text-align: center;
+font-size: 15px;
+font-family: Montserrat;
+font-weight: 700;
+letter-spacing: 0.9px;
+}
+
+.learn-button {
+background: linear-gradient(90deg, rgba(244, 240, 247, 0.01) 0%, rgba(248, 243, 251, 0.87) 3.50%, rgba(224, 197, 246, 0.47) 36.69%, #BF7AF5 100%), #BF7AF5;
+outline:none;
+color: #FFF;
+}
+
+.professional-button {
+background: linear-gradient(0deg, #F9F9F9 0%, #F9F9F9 100%), #BF7AF5;
+color: #9113F3;
+}
+
+.attribution {
+  display:absolute;
+  margin-bottom:0;
+
+}
